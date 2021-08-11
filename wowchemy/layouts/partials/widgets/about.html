@@ -91,24 +91,6 @@
       </div>
       {{ end }}
 
-      {{ with $person.education }}
-      <div class="col-md-6">
-        <div class="section-subheading">{{ i18n "education" | markdownify }}</div>
-        <ul class="ul-edu fa-ul mb-0">
-          {{ range .courses }}
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">{{ .course }}</p>
-              <p class="institution">{{ .institution }}</p>
-              <p class="institution">{{ .year }}</p>
-            </div>
-          </li>
-          {{ end }}
-        </ul>
-      </div>
-      {{ end }}
-
       {{ with $person.experiences }}
       <div class="col-md-6">
         <div class="section-subheading">Experiences</div>
@@ -119,6 +101,24 @@
             <div class="description">
               <p class="course">{{ .position }}</p>
               <p class="institution">{{ .company }}</p>
+              <p class="institution">{{ .year }}</p>
+            </div>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{ with $person.education }}
+      <div class="col-md-6">
+        <div class="section-subheading">{{ i18n "education" | markdownify }}</div>
+        <ul class="ul-edu fa-ul mb-0">
+          {{ range .courses }}
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">{{ .course }}</p>
+              <p class="institution">{{ .institution }}</p>
               <p class="institution">{{ .year }}</p>
             </div>
           </li>
