@@ -96,11 +96,8 @@
         <div class="section-subheading">Experiences</div>
         <ul class="ul-edu fa-ul mb-0">
           {{ range .works }}
-          <li>
-            <div class="featurette-icon">
-              {{- $svg_icon := resources.Get (printf "media/icons/%s.svg" .icon) -}}
-              <img src="{{ $svg_icon.RelPermalink }}" alt="{{.}}" class="svg-icon svg-baseline">
-            </div>
+          {{- $svg_icon := resources.Get (printf "media/icons/%s.svg" .icon) -}}
+          <li style="list-style-image: url({{ $svg_icon.RelPermalink }});">
             <!-- <i class="fa-li fas fa-graduation-cap"></i> -->
             <div class="description">
               <p class="course">{{ .position }}</p>
