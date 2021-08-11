@@ -99,13 +99,14 @@
           {{ range .works }}
           <!-- {{- $svg_icon := resources.Get (printf "media/icons/%s.svg" .icon) -}} -->
           <!-- <li style="list-style-image: url({{ $svg_icon.RelPermalink }});"> -->
+          <li>
             <!-- <i class="fa-li fas fa-graduation-cap"></i> -->
             <div class="description">
               <p class="course">{{ .position }}</p>
               <p class="institution">{{ .company }}</p>
               <p class="institution">{{ .year }}</p>
             </div>
-          <!-- </li> -->
+          </li>
           {{ end }}
         </ul>
       </div>
