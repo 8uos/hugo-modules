@@ -81,7 +81,7 @@
     <div class="row">
 
       {{ with $person.interests }}
-      <div class="col-md-5">
+      <div class="col-md-12">
         <div class="section-subheading">{{ i18n "interests" | markdownify }}</div>
         <ul class="ul-interests mb-0">
           {{ range . }}
@@ -92,7 +92,7 @@
       {{ end }}
 
       {{ with $person.education }}
-      <div class="col-md-7">
+      <div class="col-md-6">
         <div class="section-subheading">{{ i18n "education" | markdownify }}</div>
         <ul class="ul-edu fa-ul mb-0">
           {{ range .courses }}
@@ -101,7 +101,7 @@
             <div class="description">
               <p class="course">{{ .course }}</p>
               <p class="institution">{{ .institution }}</p>
-              <p class="year">{{ .year }}</p>
+              <p class="institution">{{ .year }}</p>
             </div>
           </li>
           {{ end }}
@@ -110,7 +110,7 @@
       {{ end }}
 
       {{ with $person.experiences }}
-      <div class="col-md-7">
+      <div class="col-md-6">
         <div class="section-subheading">Experiences</div>
         <ul class="ul-edu fa-ul mb-0">
           {{ range .works }}
@@ -119,7 +119,7 @@
             <div class="description">
               <p class="course">{{ .position }}</p>
               <p class="institution">{{ .company }}</p>
-              <p class="year">{{ .year }}</p>
+              <p class="institution">{{ .year }}</p>
             </div>
           </li>
           {{ end }}
