@@ -132,7 +132,6 @@
         {{ if eq $columns "1" }}
           <div class="section-heading col-12 mb-3 text-center">
             {{ with $st.Title }}<h1 class="mb-0">{{ . | markdownify | emojify }}</h1>{{ end }}
-            <br>
             {{ with $st.Params.subtitle }}<p class="mt-1">{{ . | markdownify | emojify }}</p>{{ end }}
           </div>
         {{else}}
