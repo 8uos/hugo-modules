@@ -115,7 +115,11 @@
         <ul class="ul-edu fa-ul mb-0">
           {{ range .courses }}
           <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="featurette-icon">
+              {{- $svg_icon := resources.Get (printf "media/icons/%s.svg" .icon) -}}
+              <img src="{{ $svg_icon.RelPermalink }}" alt="{{.}}" class="svg-icon svg-baseline">
+            </div>
+            <!-- <i class="fa-li fas fa-graduation-cap"></i> -->
             <div class="description">
               <p class="course">{{ .course }}</p>
               <p class="institution">{{ .institution }}</p>
