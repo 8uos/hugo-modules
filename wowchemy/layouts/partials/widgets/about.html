@@ -97,7 +97,7 @@
         <ul class="ul-edu fa-ul mb-0">
           {{ range .works }}
           {{- $svg_icon := resources.Get (printf "media/icons/%s.svg" .icon) -}}
-          <li style="list-style-image: {{ $svg_icon.RelPermalink }}">
+          <li style="list-style-image: {{ $svg_icon }}">
             <div class="description">
               <p class="course">{{ .position }}</p>
               <p class="institution">{{ .company }}</p>
