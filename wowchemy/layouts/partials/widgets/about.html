@@ -100,7 +100,8 @@
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
               <p class="course">{{ .course }}</p>
-              <p class="institution">{{ .institution }}{{ with .year }}, {{ . }}{{ end }}</p>
+              <p class="institution">{{ .institution }}</p>
+              <p class="year">{{ .year }}</p>
             </div>
           </li>
           {{ end }}
@@ -117,7 +118,8 @@
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
               <p class="course">{{ .position }}</p>
-              <p class="institution">{{ .company }}{{ with .year }}, {{ . }}{{ end }}</p>
+              <p class="institution">{{ .company }}</p>
+              <p class="year">{{ .year }}</p>
             </div>
           </li>
           {{ end }}
